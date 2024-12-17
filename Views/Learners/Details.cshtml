@@ -1,0 +1,72 @@
+﻿@model WebApplication4.Models.Learner
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Learner</h4>
+    <hr />
+    <dl class="row">
+        <!-- Learner ID -->
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LearnerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LearnerId)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CulturalBackground)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CulturalBackground)
+        </dd>
+    </dl>
+</div>
+
+<!-- Create Goals Button -->
+<div class="mt-3">
+    <a asp-controller="LearningGoals" asp-action="Create" class="btn btn-success">Create Goals</a>
+</div>
+
+<!-- Discussion Form Button -->
+<div class="mt-3">
+    <a asp-controller="DiscussionForums" asp-action="Create" class="btn btn-warning">Discussion Form</a>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.LearnerId" class="btn btn-primary">Edit</a>
+</div>
